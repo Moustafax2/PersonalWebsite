@@ -6,31 +6,49 @@ body {
 }
 
 header{
-    background: rgb(232, 228, 228)
+    background: rgb(235, 235, 235)
 }
 
 .nav-item{
     font-size: 20px;
     margin-left: 20px
 }
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Space between the image and text */
-}
 
 .facepicture {
     width: 250px;
     height: 250px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image is cropped correctly */
-    border: 3px solid #333; /* Optional border around the image */
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #333; 
 }
 
 .aboutParagraph{
-    font-size: 30px;
+    font-size: 25px;
 }
 
+.CVButton {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #b92929;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.CVButton:hover {
+    opacity: 0.8;
+}
+
+.CVButton .icon {
+    margin-left: 0.5rem; /* Space between text and icon */
+}
+
+.CVButton .icon svg {
+    width: 20px;
+    fill: currentColor; /* Matches the text color */
+}
 
 main {
     
@@ -41,11 +59,23 @@ section {
     margin-bottom: 40px;
 }
 
-.project {
+.experienceDiv {
     border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
+}
+
+.projectDiv{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.topRightExperienceInfo{
+    top: 4px;
+    right: 10px;
 }
 
 .project h3 {
@@ -53,39 +83,44 @@ section {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: rgb(235, 235, 235);
+    color: #000000;
     text-align: center;
-    padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background:rgb(232, 228, 228);
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 .button:hover {
-    background-color: #0056b3;
+    opacity: 0.8;
 }
 
 /* You can customize the tags further */
 .badge {
-    font-size: ;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    color: black !important;
+    border-radius: 25px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgb(208, 209, 216);
+    background: rgb(230, 231, 235);
 }
 
 .badge:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+/* Make the entire div clickable and change color on hover */
+.experience-link {
+    display: block; /* Ensure the link spans the entire div */
+    color: inherit; /* Inherit text color to prevent default link styling */
+}
+
+.experience-link:hover .experienceDiv {
+    background: rgb(245, 243, 243);
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.experienceDiv {
+    padding: 15px;
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to indicate clickability */
 }

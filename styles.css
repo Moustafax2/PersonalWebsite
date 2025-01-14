@@ -6,7 +6,7 @@ body {
 }
 
 header{
-    background: red;
+    background: rgb(232, 228, 228)
 }
 
 .nav-item{
@@ -20,11 +20,15 @@ header{
 }
 
 .facepicture {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image is cropped correctly */
     border: 3px solid #333; /* Optional border around the image */
+}
+
+.aboutParagraph{
+    font-size: 30px;
 }
 
 
@@ -62,8 +66,8 @@ footer {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+    background:rgb(232, 228, 228);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
 }

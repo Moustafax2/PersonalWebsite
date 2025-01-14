@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header{
+    background: red;
+}
+
+.nav-item{
+    font-size: 20px;
+    margin-left: 20px
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the image and text */
+}
+
+.facepicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image is cropped correctly */
+    border: 3px solid #333; /* Optional border around the image */
+}
+
+
+main {
+    
+}
+
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

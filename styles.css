@@ -75,3 +75,17 @@ footer {
 .button:hover {
     background-color: #0056b3;
 }
+
+/* You can customize the tags further */
+.badge {
+    font-size: ;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgb(208, 209, 216);
+}
+
+.badge:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

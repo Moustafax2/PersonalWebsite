@@ -1,8 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-size: 15px !important;
     line-height: 1.6;
+}
+
+.container{
+    max-width: 87% !important;
 }
 
 header{
@@ -10,29 +13,44 @@ header{
 }
 
 .nav-item{
-    font-size: 20px;
     margin-left: 20px
 }
 
+.navbar-brand{
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.sectionTitle{
+    font-family: monospace;
+}
+
 .facepicture {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%; 
     object-fit: cover; 
     border: 3px solid #333; 
 }
 
-.aboutParagraph{
-    font-size: 25px;
+.myName{
+    font-family: monospace;
+}
+
+.myJobTitle{
+    font-family: monospace;
+}
+
+.myDescription{
+    
 }
 
 .CVButton {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
     text-decoration: none;
-    color: #b92929;
+    color: #B92929;
     border-radius: 0.25rem;
     transition: background-color 0.3s ease;
 }
@@ -50,10 +68,6 @@ header{
     fill: currentColor; /* Matches the text color */
 }
 
-main {
-    
-}
-
 section {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -64,6 +78,7 @@ section {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
+    
 }
 
 .projectDiv{
@@ -80,6 +95,7 @@ section {
 
 .project h3 {
     margin-top: 0;
+    
 }
 
 footer {
@@ -91,16 +107,12 @@ footer {
     width: 100%;
 }
 
-.button:hover {
-    opacity: 0.8;
-}
-
-/* You can customize the tags further */
 .badge {
     color: black !important;
     border-radius: 25px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background: rgb(230, 231, 235);
+    font-family: monospace !important;
 }
 
 .badge:hover {
@@ -124,3 +136,4 @@ footer {
     border-radius: 5px; /* Optional: Add rounded corners */
     cursor: pointer; /* Change cursor to indicate clickability */
 }
+

@@ -4,6 +4,34 @@ body {
     line-height: 1.6;
 }
 
+@media (max-width: 576px) {
+    body {
+        font-size: 12px !important; 
+    }
+    .myname{
+        font-size: 15px !important;
+    }
+    .myJobTitle{
+        font-size: 11px !important;
+    }
+    .experienceTitle{
+        font-size: 15px !important;
+    }
+    .experienceSubTitle{
+        font-size: 11px !important;
+    }
+    .topRightExperienceInfo{
+        font-size: 10px !important;
+    }
+    .AJlogo{
+        width: 30px !important;
+    }
+}
+
+.AJlogo{
+    width: 50px;
+}
+
 .container{
     max-width: 87% !important;
 }
@@ -21,6 +49,11 @@ header{
     font-weight: bold;
 }
 
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .sectionTitle{
     font-family: monospace;
 }
@@ -34,43 +67,35 @@ header{
 }
 
 .myName{
+    font-size: 18px;
     font-family: monospace;
 }
 
 .myJobTitle{
+    font-size: 14px;
     font-family: monospace;
 }
 
-.myDescription{
-    
-}
-
-.CVButton {
+.socialButton {
     display: inline-flex;
     align-items: center;
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: #B92929;
-    border-radius: 0.25rem;
+    border-radius: 15px;
     transition: background-color 0.3s ease;
+    background: rgb(235, 235, 235);
+    margin-right: 8px;
+    margin-bottom: 8px;
 }
 
-.CVButton:hover {
+.socialButton:hover {
     opacity: 0.8;
 }
 
-.CVButton .icon {
-    margin-left: 0.5rem; /* Space between text and icon */
-}
-
-.CVButton .icon svg {
-    width: 20px;
+.socialButton .icon {
+    width: 19px;
     fill: currentColor; /* Matches the text color */
-}
-
-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .experienceDiv {
@@ -78,7 +103,14 @@ section {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
-    
+}
+
+.experienceTitle{
+    font-size: 18px;
+}
+
+.experienceSubTitle{
+    font-size: 14px;
 }
 
 .projectDiv{
@@ -91,11 +123,11 @@ section {
 .topRightExperienceInfo{
     top: 4px;
     right: 10px;
+    font-size: 13px;
 }
 
 .project h3 {
     margin-top: 0;
-    
 }
 
 footer {
@@ -110,30 +142,59 @@ footer {
 .badge {
     color: black !important;
     border-radius: 25px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     background: rgb(230, 231, 235);
     font-family: monospace !important;
+    
 }
 
 .badge:hover {
     opacity: 0.8;
     cursor: pointer;
 }
-/* Make the entire div clickable and change color on hover */
-.experience-link {
-    display: block; /* Ensure the link spans the entire div */
-    color: inherit; /* Inherit text color to prevent default link styling */
-}
 
-.experience-link:hover .experienceDiv {
-    background: rgb(245, 243, 243);
-    transition: background-color 0.3s ease; /* Smooth color transition */
+.experienceDivLink {
+    display: block; 
+    color: inherit; 
+    cursor: pointer;
 }
 
 .experienceDiv {
     padding: 15px;
-    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    cursor: pointer; /* Change cursor to indicate clickability */
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-origin: top left; /* 👈 Shrinks towards the top-left */
 }
 
+.experienceDivLink:hover .experienceDiv {
+    transition: background-color 0.3s ease; 
+    transform: scale(0.97); 
+}
+
+.experienceDivLink:hover .badge {
+    transform: scale(1.1); 
+}
+
+.experienceDivLink:hover .experienceDiv {
+    transform: scale(0.97);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    transform: scale(0.97) translate(-3px, -3px); /* Moves it slightly */
+}
+
+.experienceDiv::after {
+    content: '\f35d'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 14px;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.experienceDivLink:hover .experienceDiv::after {
+    opacity: 1;
+    transform: translateX(10px); 
+}
